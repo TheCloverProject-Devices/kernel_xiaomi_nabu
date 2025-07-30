@@ -72,10 +72,10 @@ scm_version()
 				return
 			fi
 			# Avoid asking git for tag as it could be extremely slow.
-			# We print -g{commitish}.
+			# We print /{commitish}.
 			# using exactly 12 hex chars.
 			head="$(echo $head | cut -c1-12)"
-			printf '%s%s' -g $head
+			printf '%s%s' "/" $head
 		fi
 
 		# Is this git on svn?
